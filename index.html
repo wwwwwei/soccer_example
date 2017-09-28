@@ -1,0 +1,22 @@
+<!doctype html>
+<meta charset = "utf-8">
+<body>
+	<div id = "myRect" style = transition: all 1s"'>
+		<img style = "width: 200px;" src = "ball.png">
+	</div>
+
+		<img style="width: 250px; float: right; margin-top: -200px; " src="goalpost.png">
+
+	<input type = "range" id = "myPicker" min = "10" max="1700">
+	<div id="rangeValue" style="margin-left: 50%"></div>
+
+	<script>
+		myPicker.onchange = function(){
+			myRect.style.marginLeft = myPicker.value + "px";
+			rangeValue.innerHTML = myPicker.value;
+		}
+	</script>
+	<style>
+		input{margin-top: 300px; margin-left: 35%; width: 400px;}
+	</style>
+</body>
